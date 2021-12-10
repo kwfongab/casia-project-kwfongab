@@ -18,8 +18,6 @@ start = time.perf_counter()
 
 for x2_mean in x2_means:
 
-    print(round(x2_mean, 1))
-
     for x1_mean in x1_means:
 
         [dfs_gsr, _] = workflow(
