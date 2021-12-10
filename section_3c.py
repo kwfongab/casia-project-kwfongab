@@ -10,7 +10,6 @@ from the_monte_carlo import workflow
 
 # Section 3.3
 
-
 # print when it starts
 print(datetime.now().time())
 
