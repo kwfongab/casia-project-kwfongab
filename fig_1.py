@@ -8,6 +8,9 @@ from matplotlib import pyplot as plt
 from matplotlib.colors import ListedColormap as LC, BoundaryNorm as BN
 from matplotlib.colorbar import ColorbarBase
 
+# Figure 1 of the manuscript
+# The idea behind this figure is conveyed through other figures
+
 # print when it starts
 print(datetime.now().time())
 
