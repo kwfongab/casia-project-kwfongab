@@ -7,6 +7,8 @@ from matplotlib import pyplot as plt
 from statistics import mean
 from scipy.stats import sem
 
+# Figure 4, section 3.2
+
 a_font = {'fontname': 'Arial', 'fontsize': 12}
 plt.rcParams['font.family'] = 'Arial'
 plt.rcParams['font.size'] = 12
@@ -30,8 +32,6 @@ def check_0s(lasso_coeffs, lasso_values):
 
     all_b1_is_0 = where(isclose(lasso_coeffs[0], 0.0))[0]
     all_b2_is_0 = where(isclose(lasso_coeffs[1], 0.0))[0]
-    # all_b2_is_not_0 = list(set(lins(0, len(lasso_a) - 1, len(lasso_a))) - set(all_b2_is_0))
-    # all_b2_is_not_0 = array([int(j) for j in all_b2_is_not_0])
 
     not_0_count = 2 * ones((len(lasso_values),))
     for i in lins(0, len(lasso_values) - 1, len(lasso_values)):
@@ -99,7 +99,6 @@ except NameError:
 for ax in [axea, axeb]:
     ax.set_xticks(arange(min(neg_log_a_lasso), max(neg_log_a_lasso) + 1, 1.0))
 
-
 axea.set_ylabel("coefficients", **a_font)
 axea.legend(loc="lower left")
 for ax in [axeb, axec]:
@@ -107,4 +106,3 @@ for ax in [axeb, axec]:
     ax.set_xlabel(r"-ln(λ)", **a_font)
 
 plt.savefig('Section-3B-Lasso.eps', format='eps', bbox_inches='tight')
-
