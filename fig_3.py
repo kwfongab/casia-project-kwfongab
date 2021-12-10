@@ -18,6 +18,7 @@ print(datetime.now().time())
 rngx = default_rng(1)
 sige = 1
 vare = sige ** 2
+# yes 3000 is smaller than 5000 but time doesn't permit
 n, p, snr, max_iter = 50, 15, 7, 3000
 
 X = (SS().fit_transform(rngx.normal(0, sige, (n * p, 1)))[:, 0]).reshape(n, p)
