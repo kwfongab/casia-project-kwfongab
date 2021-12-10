@@ -1,7 +1,6 @@
 from numpy import eye, ones
 from numpy.random import default_rng, normal
 from sklearn.linear_model import LinearRegression as LR
-# noinspection PyCompatibility
 from statistics import mean
 from scipy.stats import sem
 import time
