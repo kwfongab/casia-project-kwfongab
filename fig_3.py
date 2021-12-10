@@ -14,12 +14,11 @@ from the_monte_carlo import workflow
 # print when it starts
 print(datetime.now().time())
 
-# looks quite close to the plots the authors have
-rngx = default_rng(1)
+# looks ugly but not monotone so I guess it's still ok
+rngx = default_rng(1113)
 sige = 1
 vare = sige ** 2
-# yes 3000 is smaller than 5000 but time doesn't permit
-n, p, snr, max_iter = 50, 15, 7, 3000
+n, p, snr, max_iter = 50, 15, 7, 5000
 
 X = (SS().fit_transform(rngx.normal(0, sige, (n * p, 1)))[:, 0]).reshape(n, p)
 # after the standard scaler X should have mean 0, population SD 1
