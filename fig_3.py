@@ -9,6 +9,8 @@ import time
 from datetime import datetime
 from the_monte_carlo import workflow
 
+# Figure 3, section 3.1
+
 # print when it starts
 print(datetime.now().time())
 
